@@ -61,7 +61,7 @@ const poolIdsMap = new Map(pools.map((obj) => [obj.poolId, obj.category]));
 export const getPoolsData = async () => {
   const res = await fetch("https://yields.llama.fi/pools");
   if (res.ok) {
-    const { status, data } = await res.json();
+    const { data } = await res.json();
     // return only those items whose poolId matches with the one we have in the array
     const result = data
       .filter((d: PoolType) => poolIdsMap.has(d.pool))
@@ -80,7 +80,7 @@ export const getPoolsData = async () => {
 export const getPoolData = async (poolId: string) => {
   const res = await fetch("https://yields.llama.fi/pools");
   if (res.ok) {
-    const { status, data } = await res.json();
+    const { data } = await res.json();
 
     const result = data.find((pool: PoolType) => pool.pool === poolId);
 
