@@ -12,11 +12,11 @@ export const columns: ColumnDef<PoolType>[] = [
     accessorKey: "category",
     header: "Category",
     cell: ({ row }) => {
-      const { isConnected } = useWallet();
+      // const { isConnected } = useWallet();
       const pool = row.original;
-      const isYieldAggregator = pool.category === "Yield Aggregator";
-      const isLocked = isYieldAggregator && !isConnected;
-
+      // const isYieldAggregator = pool.category === "Yield Aggregator";
+      // const isLocked = isYieldAggregator && !isConnected;
+      const isLocked = false;
       return (
         <div className="flex items-center gap-2">
           <span className={isLocked ? "opacity-60" : ""}>{pool.category}</span>
@@ -29,10 +29,11 @@ export const columns: ColumnDef<PoolType>[] = [
     accessorKey: "project",
     header: "Project",
     cell: ({ row }) => {
-      const { isConnected } = useWallet();
+      // const { isConnected } = useWallet();
       const pool = row.original;
-      const isYieldAggregator = pool.category === "Yield Aggregator";
-      const isLocked = isYieldAggregator && !isConnected;
+      // const isYieldAggregator = pool.category === "Yield Aggregator";
+      // const isLocked = isYieldAggregator && !isConnected;
+      const isLocked = false;
 
       return (
         <div className="flex items-center gap-2">
@@ -46,10 +47,11 @@ export const columns: ColumnDef<PoolType>[] = [
     accessorKey: "symbol",
     header: "Symbol",
     cell: ({ row }) => {
-      const { isConnected } = useWallet();
+      // const { isConnected } = useWallet();
       const pool = row.original;
-      const isYieldAggregator = pool.category === "Yield Aggregator";
-      const isLocked = isYieldAggregator && !isConnected;
+      // const isYieldAggregator = pool.category === "Yield Aggregator";
+      // const isLocked = isYieldAggregator && !isConnected;
+      const isLocked = false;
 
       return (
         <span className={isLocked ? "opacity-60" : ""}>{pool.symbol}</span>
@@ -60,10 +62,11 @@ export const columns: ColumnDef<PoolType>[] = [
     accessorKey: "tvlUsd",
     header: "TVL (USD)",
     cell: ({ row }) => {
-      const { isConnected } = useWallet();
+      // const { isConnected } = useWallet();
       const pool = row.original;
-      const isYieldAggregator = pool.category === "Yield Aggregator";
-      const isLocked = isYieldAggregator && !isConnected;
+      // const isYieldAggregator = pool.category === "Yield Aggregator";
+      // const isLocked = isYieldAggregator && !isConnected;
+      const isLocked = false;
 
       return (
         <span className={isLocked ? "opacity-60" : ""}>
@@ -76,10 +79,11 @@ export const columns: ColumnDef<PoolType>[] = [
     accessorKey: "apy",
     header: "APY",
     cell: ({ row }) => {
-      const { isConnected } = useWallet();
+      // const { isConnected } = useWallet();
       const pool = row.original;
-      const isYieldAggregator = pool.category === "Yield Aggregator";
-      const isLocked = isYieldAggregator && !isConnected;
+      // const isYieldAggregator = pool.category === "Yield Aggregator";
+      // const isLocked = isYieldAggregator && !isConnected;
+      const isLocked = false;
 
       return (
         <span className={isLocked ? "opacity-60" : ""}>
@@ -92,10 +96,11 @@ export const columns: ColumnDef<PoolType>[] = [
     accessorKey: "predictions",
     header: "Prediction",
     cell: ({ row }) => {
-      const { isConnected } = useWallet();
+      // const { isConnected } = useWallet();
       const pool = row.original;
-      const isYieldAggregator = pool.category === "Yield Aggregator";
-      const isLocked = isYieldAggregator && !isConnected;
+      // const isYieldAggregator = pool.category === "Yield Aggregator";
+      // const isLocked = isYieldAggregator && !isConnected;
+      const isLocked = false;
 
       if (isLocked) {
         return (
@@ -125,10 +130,11 @@ export const columns: ColumnDef<PoolType>[] = [
     accessorKey: "sigma",
     header: "Sigma",
     cell: ({ row }) => {
-      const { isConnected } = useWallet();
+      // const { isConnected } = useWallet();
       const pool = row.original;
-      const isYieldAggregator = pool.category === "Yield Aggregator";
-      const isLocked = isYieldAggregator && !isConnected;
+      // const isYieldAggregator = pool.category === "Yield Aggregator";
+      // const isLocked = isYieldAggregator && !isConnected;
+      const isLocked = false;
 
       if (isLocked) {
         return (
@@ -143,10 +149,11 @@ export const columns: ColumnDef<PoolType>[] = [
     accessorKey: "apyMean30d",
     header: "APY Mean (30d)",
     cell: ({ row }) => {
-      const { isConnected } = useWallet();
+      // const { isConnected } = useWallet();
       const pool = row.original;
-      const isYieldAggregator = pool.category === "Yield Aggregator";
-      const isLocked = isYieldAggregator && !isConnected;
+      // const isYieldAggregator = pool.category === "Yield Aggregator";
+      // const isLocked = isYieldAggregator && !isConnected;
+      const isLocked = false;
 
       if (isLocked) {
         return (
@@ -161,10 +168,11 @@ export const columns: ColumnDef<PoolType>[] = [
     id: "actions",
     header: "Actions",
     cell: ({ row }) => {
-      const { isConnected } = useWallet();
+      // const { isConnected } = useWallet();
       const pool = row.original;
-      const isYieldAggregator = pool.category === "Yield Aggregator";
-      const isLocked = isYieldAggregator && !isConnected;
+      // const isYieldAggregator = pool.category === "Yield Aggregator";
+      // const isLocked = isYieldAggregator && !isConnected;
+      const isLocked = false;
 
       if (isLocked) {
         return (
