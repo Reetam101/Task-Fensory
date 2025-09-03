@@ -12,6 +12,8 @@ export type PoolType = {
   underlyingTokens: string[];
   poolMeta: string;
   url: string;
+  sigma: number;
+  apyMean30d: number;
   predictions: {
     predictedClass: string;
     predictedProbability: number;

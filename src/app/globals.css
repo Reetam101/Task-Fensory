@@ -120,3 +120,14 @@
     @apply bg-background text-foreground;
   }
 }
+
+.locked-row {
+  opacity: 0.6;
+  filter: blur(1px);
+  transition: all 0.3s ease;
+}
+
+.locked-row:hover {
+  opacity: 0.8;
+  filter: blur(0.5px);
+}

@@ -76,3 +76,38 @@ export const getPoolsData = async () => {
   }
   return null;
 };
+
+export const getPoolData = async (poolId: string) => {
+  const res = await fetch("https://yields.llama.fi/pools");
+  if (res.ok) {
+    const { status, data } = await res.json();
+
+    const result = data.find((pool: PoolType) => pool.pool === poolId);
+
+    if (!poolId) throw new Error("Pool not found!");
+
+    const category = poolIdsMap.get(poolId);
+    return {
+      ...result,
+      category: category || "unknown",
+    };
+  }
+  return null;
+};
+
+export interface APYHistoryData {
+  data: {
+    timestamp: string;
+    apy: number;
+  }[];
+}
+
+export const fetchAPYHistory = async (
+  poolId: string
+): Promise<APYHistoryData> => {
+  const response = await fetch(`https://yields.llama.fi/chart/${poolId}`);
+  if (!response.ok) {
+    throw new Error("Failed to fetch APY history");
+  }
+  return response.json();
+};
