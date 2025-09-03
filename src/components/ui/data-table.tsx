@@ -17,6 +17,7 @@ import {
 } from "@/components/ui/table";
 import { LockedTableRow } from "@/components/locked-table-row";
 import { cn } from "@/lib/utils";
+import { PoolType } from "@/lib/types";
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
@@ -59,7 +60,7 @@ export function DataTable<TData, TValue>({
         <TableBody>
           {table.getRowModel().rows?.length ? (
             table.getRowModel().rows.map((row) => (
-              <LockedTableRow key={row.id} rowData={row.original}>
+              <LockedTableRow key={row.id} rowData={row.original as PoolType}>
                 {row.getVisibleCells().map((cell) => (
                   <TableCell key={cell.id}>
                     {flexRender(cell.column.columnDef.cell, cell.getContext())}

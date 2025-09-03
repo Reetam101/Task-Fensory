@@ -23,7 +23,7 @@ import {
 } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Badge } from "@/components/ui/badge";
-import { ExternalLink, ArrowLeft, Calendar } from "lucide-react";
+import { ExternalLink, ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
